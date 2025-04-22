@@ -4,7 +4,7 @@ out/
 !**/src/test/**/out/
 .idea/
 *.xml
-git_exercises.iml
+/git_exercises.iml
 
 ### Eclipse ###
 .apt_generated
