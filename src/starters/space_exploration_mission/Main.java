@@ -113,3 +113,54 @@ public class Main {
 //        ceres.describe();
     }
 }
+/*
+ output:
+ --- Space Exploration Mission Control System ---
+
+--- 1. Demonstrating Constructor Exceptions ---
+Error creating Planet: Mass must be a positive value.
+Error creating Asteroid: Rotation period must be a positive value.
+Error creating Astronaut: Experience years must be between 1 and 50.
+Error creating Mission: Mission destination cannot be null.
+
+--- 2. Creating Valid Objects ---
+Planet [Name: Mars, Mass: 6.39E23 kg, Distance: 2.25E8 km, Atmosphere: true]
+Asteroid [Name: Ceres, Mass: 9.38E20 kg, Distance: 4.13E8 km, Rotation: 9.07 hours]
+Astronaut [ID: AS001, Name: Neil Armstrong, Exp: 30 years, Specialty: Commander]
+SpaceMission [ID: MR001, Destination: Mars, Duration: 687 days, Status: PLANNED, Primary Astronaut: Neil Armstrong]
+
+--- 3. Demonstrating Comparable (Celestial Body Natural Order) ---
+Mars vs Ceres (by Distance): -1
+Ceres vs Vesta (by Distance): 1
+Earth vs Mars (by Distance): -1
+
+--- 4. Demonstrating Cloneable (Astronaut Cloning) ---
+Original Neil: Astronaut [ID: AS001, Name: Neil Armstrong, Exp: 30 years, Specialty: Commander]
+Cloned Neil:   Astronaut [ID: AS001, Name: Neil Armstrong, Exp: 30 years, Specialty: Commander]
+Are original and cloned the same object? false
+Are original and cloned equal (Object.equals)? false
+
+--- 5. Demonstrating Launchable & Debriefable with Exceptions ---
+Mission MR001 launched successfully to Mars!
+Caught Launch Exception: Cannot launch mission MR001. Current status is ACTIVE, but must be PLANNED.
+Caught Debrief Exception: Cannot debrief mission MR001. Current status is ACTIVE, but must be COMPLETED or ABORTED.
+Changing Mars Rover status to COMPLETED for debrief.
+Mission MR001 debriefed. Status: COMPLETED.
+
+--- 6. Demonstrating Comparator (Astronaut Custom Sorting) ---
+Neil vs Buzz (Exp): -1
+Neil vs Sally (Exp): -1
+Buzz vs Sally (Exp): -1
+Neil vs Sally (Exp): -1
+Sally vs Buzz (Exp): 1
+
+--- 7. Demonstrating Comparator (Mission Status Sorting) ---
+Earth Obs. (PLANNED) vs Asteroid Sample (ACTIVE): 1
+Asteroid Sample (ACTIVE) vs Mars Rover (COMPLETED): -2
+Earth Obs. (PLANNED) vs Mars Rover (COMPLETED): -1
+
+--- Describing Celestial Bodies ---
+This is a Planet named Mars. It has an atmosphere.
+This is an Asteroid named Ceres. It rotates every 9.07 hours.
+
+ */
