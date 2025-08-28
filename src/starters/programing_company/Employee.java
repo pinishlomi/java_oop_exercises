@@ -18,7 +18,7 @@ public class Employee {
     }
 
     public void applyRaise() {
-        salary *= RAISE_FACTOR;
+        salary *= this.RAISE_FACTOR;
     }
 
     public String getName() {
@@ -37,4 +37,14 @@ public class Employee {
                 salary;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj){
+            return true;
+        }
+        if (obj instanceof Employee e){
+            return id.equals(e.id);
+        }
+        return false;
+    }
 }
